@@ -17,7 +17,7 @@ links - a page that holds my github and linkedin
 
 # images
 
-![Homepage](images/homepage.png)
+![Homepage](assets/homepage.png)
 
 # getting started
 
@@ -25,12 +25,7 @@ links - a page that holds my github and linkedin
 
 any modern web browser
 an internet connection as boostrap needs to load icons
-the extenstion of live server for editiong and previewing
-
-## installing
-
-downlopad the code by copying the repository
-git clone https://github.com/ashhow992/REPO-NAME.git
+the extenstion of live server for editiing and previewing
 
  # executing program
 
