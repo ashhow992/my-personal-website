@@ -9,10 +9,14 @@ body {
    
 }
 
+/* Stops padding and borders making boxes bigger than set */
 * {
     box-sizing: border-box;
 }
 
+/* ===== HOME PAGE ===== */
+
+/* Centres everything on the screen, with the background image */
 .home {
     margin: 0;
     min-height: 100vh;
@@ -25,11 +29,13 @@ body {
     background: url("background.jpg") center / cover no-repeat fixed;
 }
 
+/* Holds the intro and buttons, max 700px wide */
 .main-box {
     width: 90%;
     max-width: 700px;
 }
 
+/* Big intro box */
 .big-button {
     display: block;
     width: 100%;
@@ -48,6 +54,7 @@ body {
     box-shadow: 0 0 20px #4f22d6;
 }
 
+/* Row of two equal-width buttons */
 .small-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -55,6 +62,7 @@ body {
     margin-top: 15px;
 }
 
+/* Projects / Links buttons */
 .small-button {
     display: block;
     color: white;
@@ -73,6 +81,7 @@ body {
     color: white;
 }
 
+/* Buttons lift up slightly when hovered */
 .small-button,
 .big-button {
     transition: transform 0.15s ease, background 0.3s, box-shadow 0.3s;
@@ -84,6 +93,9 @@ body {
 
 }
 
+/* ===== LINKS PAGE ===== */
+
+/* Stacks the link buttons in the middle of the screen */
 .link-buttons {
     display: grid;
     grid-template-columns: 1fr;
@@ -94,6 +106,7 @@ body {
     align-content: center;    
 }
 
+/* Each link button: logo above the name */
 .link-button {
     display: flex;
     flex-direction: column;
@@ -112,6 +125,7 @@ body {
    
 }
 
+/* Logo size */
 .link-button i {
     font-size: 60px;
     width: 200px;
@@ -124,6 +138,7 @@ body {
     transform: translateY(-2px);
 }
 
+/* Back-to-home button */
 .back {
     display: block;
     max-width: 300px;
@@ -131,9 +146,11 @@ body {
 }
 
 
+/* Brand colours on hover (GitHub grey, LinkedIn blue) */
 .link-button:first-child:hover { background: #333; }
 .link-button:last-child:hover  { background: #0a66c2; }
 
+/* Centres a page with class="links" (not currently used) */
 body.links {
     margin: 0;
     min-height: 100vh;
@@ -143,6 +160,7 @@ body.links {
     align-items: center;
 }
 
+/* Row of cards (not currently used) */
 .card-row {
     display: flex;
     flex-wrap: wrap;
@@ -150,6 +168,9 @@ body.links {
     gap: 1rem;
 }
 
+/* ===== PROJECTS SLIDER ===== */
+
+/* Box around the slider */
 .img-slider {
     position: relative;
     width: 90%;
@@ -157,6 +178,7 @@ body.links {
     margin: 40px auto;
 }
 
+/* Row of pictures that scrolls sideways */
 .slider-track {
     display: flex;
     gap: 20px;
@@ -166,10 +188,12 @@ body.links {
     scrollbar-width: none;
 }
 
+/* Hide the scrollbar */
 .slider-track::-webkit-scrollbar {
     display: none;
 }
 
+/* Each picture: a third of the width, so three show at once */
 .slider-track img {
     flex: 0 0 calc((100% - 40px) / 3);
     height: 250px;
@@ -179,6 +203,7 @@ body.links {
     scroll-snap-align: start;
 }
 
+/* Round arrow buttons on either side */
 .slider-arrow {
     position: absolute;
     top: 50%;
@@ -198,15 +223,18 @@ body.links {
     background: #4f22d6;
 }
 
+/* Arrow positions */
 .slider-arrow.left  { left: -20px; }
 .slider-arrow.right { right: -20px; }
 
+/* Phones: one picture at a time */
 @media (max-width: 700px) {
     .slider-track img {
         flex: 0 0 100%;
     }
 }
 
+/* A picture with a caption on top */
 .slide-box {
     position: relative;
     flex: 0 0 calc((100% - 40px) / 3);
@@ -224,6 +252,7 @@ body.links {
 
 }
 
+/* The caption box on the picture */
 .img-text {
     position: absolute;
     bottom: 10px;

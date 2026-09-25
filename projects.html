@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Projects page: a sliding row of pictures of my projects -->
 <html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
@@ -8,15 +9,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body> 
+    <!-- Image slider -->
     <div class="img-slider">
         <body class="d-flex flex-column justify-content-center min-vh-100"><h1>Projects</h1>
+
+        <!-- Left arrow -->
         <button class="slider-arrow left" onclick="showImage(-1)"><i class="bi bi-chevron-left"></i></button>
 
+        <!-- The pictures (three show at a time) -->
         <div class="slider-track" id="slider-track">
+            <!-- My server, with a caption on top of the picture -->
             <div class="slide-box">
     <img src="assets/server.png" alt="My server">
     <div class="img-text">a server me and all my freinds made in college</div>
 </div>
+            <!-- Placeholders for future projects -->
             <img src="assets/question.png" alt="Image 1">
             <img src="assets/question.png" alt="Image 1">
             <img src="assets/question.png" alt="Image 1">
@@ -24,13 +31,15 @@
             <img src="assets/question.png" alt="Image 1">
         </div>
 
+         <!-- Right arrow -->
          <button class="slider-arrow right" onclick="showImage(1)"><i class="bi bi-chevron-right"></i></button>
     </div>
 
     <script>
+    // Slides the pictures one step left (-1) or right (1) when an arrow is clicked
     function showImage(direction) {
         const track = document.getElementById("slider-track");
-        const imageWidth = track.querySelector("img").offsetWidth + 20;
+        const imageWidth = track.querySelector("img").offsetWidth + 20; // one picture + the gap
         track.scrollBy({ left: direction * imageWidth, behavior: "smooth" });
     }
     </script>
